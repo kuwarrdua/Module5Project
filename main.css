@@ -1,0 +1,42 @@
+/* The styling is simple enough because I did not have much to be styled. */
+/*This is the styling on the body. The main thing is to create a background image.*/
+ body{
+     background-image: url("https://cdn.pixabay.com/photo/2017/06/14/08/20/map-of-the-world-2401458_1280.jpg");
+     background-repeat: no-repeat;
+     background-size: cover;
+}
+/*This is the styling on images which I have used for the rental property*/
+ #img1 img{
+     margin-top: 20px;
+     border: 5px solid #C8DADA;
+     border-radius: 5px;
+}
+ #img2 img{
+     height:35 0px;
+     width:520px;
+     border: 5px solid #318082;
+     border-radius: 5px;
+}
+/*This is the styling on the buttons to make them bigger and beautiful*/
+ #btn1,#btn2,#btn3,#btn4,#btn5,#btn6,#btn7 {
+     background-color: black;
+     color:white;
+     height:45px;
+     width:120px;
+}
+
+#payment{
+    background-color: Red;
+     color:white;
+     height:55px;
+     width:120px;
+     margin:auto;
+     display: block;
+     font-weight: 500;
+
+}
+/*simple as nothing to make it visible more good just changed it's color*/
+ h1{
+     color:black;
+}
+ 
