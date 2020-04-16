@@ -39,4 +39,14 @@
  h1{
      color:black;
 }
+
+article {
+  height: 500px;
+}
+
+#mapDisplay{
+     height: 100%;
+     width:100%;
+     background-color: black;
+}
  

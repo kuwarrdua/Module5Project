@@ -1,3 +1,4 @@
+
 //As mentioned I created a vacation rental object with the properties defined
 //I preffered to choose the class syntax obviously to get that AWESOMESAUCE and also to learn more
 class VacationRental {
@@ -128,29 +129,174 @@ btn7.addEventListener('click', function() {
     p.setAttribute('style', 'font-size:30px;font-weight:bold;font-style:italic;color:red;');
 });
 
+
+// JavaScript Document
 function thirdPartyApi() {
-    let seaShellHouse = {
-        lat: 21.2138104,
-        lng: -86.7151262
+    let seaShell = {
+        lat: 21.2109126,
+        lng: -86.7189751
     };
 
-    let googleMapDisplay = document.getElementById('googleMap');
+    let undergroundHygge = {
+          lat: 47.6253856,
+        lng: -120.2393811
+    }
 
-     let map = new google.maps.Map(googleMapDisplay, {
+    let div = document.getElementById('mapDisplay');
+
+    //create new map object
+    let map = new google.maps.Map(div, {
         zoom: 14,
-        center: seaShellHouse,
-        });
+        center: seaShell,
+        styles: [{
+                "elementType": "geometry",
+                "stylers": [{
+                    "color": "#242f3e"
+                }]
+            },
+            {
+                "elementType": "labels.text.fill",
+                "stylers": [{
+                    "color": "#746855"
+                }]
+            },
+            {
+                "elementType": "labels.text.stroke",
+                "stylers": [{
+                    "color": "#242f3e"
+                }]
+            },
+            {
+                "featureType": "administrative.locality",
+                "elementType": "labels.text.fill",
+                "stylers": [{
+                    "color": "#d59563"
+                }]
+            },
+            {
+                "featureType": "poi",
+                "elementType": "labels.text.fill",
+                "stylers": [{
+                    "color": "#d59563"
+                }]
+            },
+            {
+                "featureType": "poi.park",
+                "elementType": "geometry",
+                "stylers": [{
+                    "color": "#263c3f"
+                }]
+            },
+            {
+                "featureType": "poi.park",
+                "elementType": "labels.text.fill",
+                "stylers": [{
+                    "color": "#6b9a76"
+                }]
+            },
+            {
+                "featureType": "road",
+                "elementType": "geometry",
+                "stylers": [{
+                    "color": "#38414e"
+                }]
+            },
+            {
+                "featureType": "road",
+                "elementType": "geometry.stroke",
+                "stylers": [{
+                    "color": "#212a37"
+                }]
+            },
+            {
+                "featureType": "road",
+                "elementType": "labels.text.fill",
+                "stylers": [{
+                    "color": "#9ca5b3"
+                }]
+            },
+            {
+                "featureType": "road.highway",
+                "elementType": "geometry",
+                "stylers": [{
+                    "color": "#746855"
+                }]
+            },
+            {
+                "featureType": "road.highway",
+                "elementType": "geometry.stroke",
+                "stylers": [{
+                    "color": "#1f2835"
+                }]
+            },
+            {
+                "featureType": "road.highway",
+                "elementType": "labels.text.fill",
+                "stylers": [{
+                    "color": "#f3d19c"
+                }]
+            },
+            {
+                "featureType": "transit",
+                "elementType": "geometry",
+                "stylers": [{
+                    "color": "#2f3948"
+                }]
+            },
+            {
+                "featureType": "transit.station",
+                "elementType": "labels.text.fill",
+                "stylers": [{
+                    "color": "#d59563"
+                }]
+            },
+            {
+                "featureType": "water",
+                "elementType": "geometry",
+                "stylers": [{
+                    "color": "#17263c"
+                }]
+            },
+            {
+                "featureType": "water",
+                "elementType": "labels.text.fill",
+                "stylers": [{
+                    "color": "#515c6d"
+                }]
+            },
+            {
+                "featureType": "water",
+                "elementType": "labels.text.stroke",
+                "stylers": [{
+                    "color": "#17263c"
+                }]
+            }
+        ]
+    });
 
-      let marker = new google.maps.Marker({
-        position: seaShellHouse,
+    //create new marker object
+    let marker = new google.maps.Marker({
+        position: seaShell,
         animation: google.maps.Animation.BOUNCE,
         map: map,
         label: {
             color: 'white',
             fontWeight: 'bold',
-            text: 'ISOLATION PLACE',
+            text: 'SeaShell House',
         }
     });
+
+     let marker2 = new google.maps.Marker({
+        position: undergroundHygge,
+        animation: google.maps.Animation.BOUNCE,
+        map: map,
+        label: {
+            color: 'white',
+            fontWeight: 'bold',
+            text: 'underground Hygge',
+        }
+    });
+
 }
 
 let payBtn = document.getElementById('payment');
