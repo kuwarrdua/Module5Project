@@ -40,10 +40,13 @@
      color:black;
 }
 
+/*styling the height of article element that contains the map*/
 article {
   height: 500px;
 }
 
+
+/*setting height of div element as well*/
 #mapDisplay{
      height: 100%;
      width:100%;

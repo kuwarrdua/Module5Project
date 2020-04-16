@@ -132,6 +132,7 @@ btn7.addEventListener('click', function() {
 
 // JavaScript Document
 function thirdPartyApi() {
+    //coords for both my rebtal locations
     let seaShell = {
         lat: 21.2109126,
         lng: -86.7189751
@@ -142,9 +143,10 @@ function thirdPartyApi() {
         lng: -120.2393811
     }
 
+    //calling the div element
     let div = document.getElementById('mapDisplay');
 
-    //create new map object
+    //create new map object and using a map color style as well
     let map = new google.maps.Map(div, {
         zoom: 14,
         center: seaShell,
@@ -274,7 +276,7 @@ function thirdPartyApi() {
         ]
     });
 
-    //create new marker object
+    //create new marker object and setting some animations and label properties
     let marker = new google.maps.Marker({
         position: seaShell,
         animation: google.maps.Animation.BOUNCE,
@@ -286,6 +288,7 @@ function thirdPartyApi() {
         }
     });
 
+    //same for second location
      let marker2 = new google.maps.Marker({
         position: undergroundHygge,
         animation: google.maps.Animation.BOUNCE,
@@ -299,9 +302,11 @@ function thirdPartyApi() {
 
 }
 
+//integrating the payment request api
 let payBtn = document.getElementById('payment');
 payBtn.addEventListener('click',requestPayment);
 
+//checking whether it exists or not and if yes use the if statement otherwise use the else statement
 function requestPayment(){
     if(window.PaymentRequest){
 
